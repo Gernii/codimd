@@ -15,7 +15,7 @@
   "license": "AGPL-3.0",
   "main": "app.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js --display errors-only -p",
+    "build": "bin/setup && webpack --config webpack.prod.js --display errors-only -p && node app.js",
     "dev": "webpack --config webpack.dev.js --progress --colors --watch",
     "doctoc": "doctoc --title='# Table of Contents' README.md",
     "lint": "standard",
@@ -186,6 +186,7 @@
     "sinon": "~7.3.2",
     "socket.io-client": "~2.2.0",
     "spin.js": "~4.0.0",
+    "sqlite3": "^5.1.6",
     "standard": "~13.1.0",
     "store": "~2.0.12",
     "string-loader": "~0.0.1",
